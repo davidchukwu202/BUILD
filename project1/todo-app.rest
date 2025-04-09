@@ -1,0 +1,56 @@
+### GET/
+GET http://localhost:5000
+ 
+
+### POST/ for register
+
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "cos202@gmail.com",
+    "password": "123456789"
+
+}
+
+
+### POST/ for login
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "cos202@gmail.com",
+    "password": "123456789"
+
+}
+
+### FEtch all todos GET/TODOS(protected)
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQzOTg2NTU3LCJleHAiOjE3NDQwNzI5NTd9.Fiu4UICZCiT4uHvRnzSCgHIIzWwFeht7qsKa39W2xko
+
+### create a new todo Post/todos(protected)
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQzOTg2NTU3LCJleHAiOjE3NDQwNzI5NTd9.Fiu4UICZCiT4uHvRnzSCgHIIzWwFeht7qsKa39W2xko
+Content-Type: application/json
+
+{
+    "task":"finish coding the projects"
+}
+
+
+### Update a todo PUT/todos/:ID (protected) 
+
+PUT http://localhost:5000/todos/2?
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQzOTg2NTU3LCJleHAiOjE3NDQwNzI5NTd9.Fiu4UICZCiT4uHvRnzSCgHIIzWwFeht7qsKa39W2xko
+Content-Type:application/json
+
+{
+    "completed":"1"
+}
+
+
+### DELETE a todo DELETE/todos/:ID (protected) 
+
+DELETE  http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQzOTg2NTU3LCJleHAiOjE3NDQwNzI5NTd9.Fiu4UICZCiT4uHvRnzSCgHIIzWwFeht7qsKa39W2xko
+

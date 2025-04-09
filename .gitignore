@@ -1,0 +1,13 @@
+.env
+node_modules/
+
+# Prisma
+prisma/dev.db
+prisma/migrations/
+
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yaml
+*.pid
